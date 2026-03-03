@@ -10,7 +10,7 @@ class Patient(models.Model):
     date_of_birth = models.DateField() #DateField is used to store date data, and it does not require a max_length argument.
     date_and_time_of_admission = models.DateTimeField() #DateTimeField is used to store date and time data, and it does not require a max_length argument.
     medical_history = models.TextField() #TextField is used to store large text data, and it does not require a max_length argument.
-    height_in_cm = models.FloatField() #FloatField is used to store floating-point numbers, and it does not require a max_length argument.
-    weight_in_kg = models.FloatField() #FloatField is used to store floating-point numbers, and it does not require a max_length argument.
+    height = models.IntegerField() #IntegerField is used to store integer data, and it does not require a max_length argument.
+    weight = models.FloatField() #FloatField is used to store floating-point numbers, and it does not require a max_length argument.
 
 
