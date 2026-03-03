@@ -10,7 +10,6 @@ class Patient(models.Model):
     date_of_birth = models.DateField() #DateField is used to store date data, and it does not require a max_length argument.
     date_and_time_of_admission = models.DateTimeField() #DateTimeField is used to store date and time data, and it does not require a max_length argument.
     medical_history = models.TextField() #TextField is used to store large text data, and it does not require a max_length argument.
-    height = models.IntegerField() #IntegerField is used to store integer data, and it does not require a max_length argument.
-    weight = models.FloatField() #FloatField is used to store floating-point numbers, and it does not require a max_length argument.
 
-
+    def __str__(self):
+        return self.name #The __str__ method is a special method in Python that is used to define the string representation of an object. In this case, it returns the name of the patient when the object is printed or converted to a string. Onlu used as string representation of the object, it does not affect the functionality of the model.
