@@ -12,4 +12,5 @@ class Patient(models.Model):
     medical_history = models.TextField() #TextField is used to store large text data, and it does not require a max_length argument.
 
     def __str__(self):
-        return self.name #The __str__ method is a special method in Python that is used to define the string representation of an object. In this case, it returns the name of the patient when the object is printed or converted to a string. Onlu used as string representation of the object, it does not affect the functionality of the model.
+        return self.name 
+#The __str__ method is a special method in Python that is used to define the string representation of an object. In this case, it returns the name of the patient when the object is printed or converted to a string. Onlu used as string representation of the object, it does not affect the functionality of the model.
