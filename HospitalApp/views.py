@@ -6,3 +6,6 @@ def home(request):
 
 def starter(request):
     return render(request, 'starter-page.html')
+
+def appointment(request):
+    return render(request, 'appointment.html')    

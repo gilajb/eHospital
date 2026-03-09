@@ -23,3 +23,15 @@ class Doctor(models.Model):
 
     def __str__(self):
         return self.name
+
+class Appointment(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField() #EmailField is used to store email addresses, and max_length is a required argument that specifies the maximum length of the email address.
+    phone_number = models.CharField(max_length=16) #CharField is used to store string data, and max_length is a required argument that specifies the maximum length of the string.
+    date_and_time_of_appointment = models.DateTimeField() #DateTimeField is used to store date and time data, and it does not require a max_length argument.
+    department = models.CharField(max_length=100) #CharField is used to store string data, and max_length is a required argument that specifies the maximum length of the string.
+    doctor = models.CharField(max_length=100) #CharField is used to store string data, and max_length is a required argument that specifies the maximum length of the string.
+    message = models.TextField() #TextField is used to store large text data, and it does not require a max_length argument.
+    
+    def __str__(self):
+        return self.name      
