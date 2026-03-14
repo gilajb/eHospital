@@ -9,3 +9,4 @@ admin.site.register(Doctor)
 
 from .models import Appointment
 admin.site.register(Appointment)
+

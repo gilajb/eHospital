@@ -7,5 +7,7 @@ urlpatterns = [  #NOTE: This is the main URL configuration for the HospitalApp p
     path('home/', views.home, name='home'),
     path('', views.home, name='home'), #NOTE: The empty path '' is also mapped to the home view, making it the default page when the user visits the root URL of the application.
     path('starter/', views.starter, name='starter'), 
-    path('appointment/', views.appointment, name='appointment')
+    path('appointment/', views.appointment, name='appointment'),
+    path('show/', views.show, name='show'),
+    path('showpatient/', views.showpatient, name='showpatient'),
 ]
