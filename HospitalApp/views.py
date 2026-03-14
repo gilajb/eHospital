@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Appointment
+from HospitalApp.models import Appointment
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -20,6 +21,7 @@ def appointment(request):
             message = request.POST.get('message')
         )
         all.save()
+        messages.success(request, 'Appointment booked successfully!')
         return render(request, 'appointment.html') 
 
     else:
@@ -36,4 +38,6 @@ def showpatient(request):
 def delete(request, id):
     myappointment = Appointment.objects.get(id=id)
     myappointment.delete()
+    messages.success(request, 'Appointment deleted successfully!')
     return redirect('/show')
+
